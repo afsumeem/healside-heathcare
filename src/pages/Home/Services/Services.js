@@ -31,22 +31,19 @@ const Services = () => {
                             </Service>)
                         }
                     </div>
-
                     <div className="col-md-3 col-sm-12"></div>
-
                 </div>
 
+
                 <div className="row m-0">
-                    <div className="col-md-12 col-sm-12">
-                        <div className="services-2nd-row">
-                            {
-                                services.filter(service2ndRow => service2ndRow.position === 2).map(service => <Service
-                                    key={service._id}
-                                    service={service}
-                                >
-                                </Service>)
-                            }
-                        </div>
+                    <div className="col-md-12 col-sm-12 services-2nd-row">
+                        {
+                            services.filter(service2ndRow => service2ndRow.position === 2).map(service => <Service
+                                key={service._id}
+                                service={service}
+                            >
+                            </Service>)
+                        }
                     </div>
                 </div>
 

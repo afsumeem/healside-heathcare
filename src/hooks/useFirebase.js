@@ -8,24 +8,43 @@ const useFirebase = () => {
     const auth = getAuth();
 
     const [user, setUsers] = useState({});
-    const [isLoading, setIsLoading] = useState(true);
-    const [errors, setErrors] = useState("")
 
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState("");
+
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const getUserEmail = (event) => {
+        setEmail(event.target.value);
+    };
+
+    const getUserPassword = (event) => {
+        setPassword(event.target.value);
+    };
 
 
     //create user with email and password
 
-    // const createUser = signInWithEmailAndPassword(auth, email, password)
-    //     .then((userCredential) => {
+    const handleSubmitForm = event => {
+        event.preventDefault();
 
-    //         const user = userCredential.user;
+        if (password.length > 6) {
+            setError("password should have 6 character")
+            return;
+        } if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
+            setError("password must contain 2 upper case")
+            return;
+        }
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                setUsers(result.user);
+            })
 
-    //     })
-    //     .catch((error) => {
-    //         const errorCode = error.code;
-    //         const errorMessage = error.message;
-    //     });
-
+            .catch((err) => {
+                setError(err.message)
+            })
+    };
 
 
     //Google sign in
@@ -73,7 +92,9 @@ const useFirebase = () => {
         user,
         signInUsingGoogle,
         isLoading,
-        // createUser,
+        getUserEmail,
+        getUserPassword,
+        handleSubmitForm,
         logOut
     }
 };

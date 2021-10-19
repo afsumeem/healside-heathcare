@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button, Col, FloatingLabel, Form } from 'react-bootstrap';
+import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    const { signInUsingGoogle, setIsLoading } = useAuth();
+    const { signInUsingGoogle } = useAuth();
+
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home';
@@ -28,7 +29,7 @@ const Login = () => {
 
         <div className="mt-5">
             <h2 className="pt-5 text-uppercase fw-bolder">Please Log In</h2>
-            <Form onSubmit={handleSubmit} className="w-25 mx-auto pt-5">
+            <Form onSubmit={handleSubmit} className="w-50 mx-auto pt-5">
                 <FloatingLabel
                     controlId="floatingInput"
                     label="Email address"
@@ -40,27 +41,20 @@ const Login = () => {
                     <Form.Control type="password" placeholder="Password" />
                 </FloatingLabel>
 
-                <Button className="w-100 mt-3 rounded-pill" type="submit">Sign in</Button>
+                <Button className="w-100 mt-3" type="submit">Sign in</Button>
 
             </Form>
-            <div>
-                <p>Or Sign in Using</p>
 
-                <Button variant="outline-danger"
-                    onClick={handleGoogleLogIn}
-                    className="mt-5">Google Sign In
-                </Button>
-
-            </div>
+            <Button variant="outline-danger" className="mt-3"
+                onClick={handleGoogleLogIn}
+            >Google Sign In
+            </Button>
 
 
-            <div>
-                <div className="d-flex justify-content-center">
-                    <Form.Check type="checkbox" />
-                    <p className="ms-3">Don't have account?</p>
-                </div>
+            <div className="d-flex justify-content-center  my-4">
 
-                <NavLink to="/register"><button className="btn btn-info">Signup Now</button> </NavLink>
+                <p className="ms-3">Don't have account? </ p>
+                <NavLink to="/register">Sign up Now </NavLink>
             </div>
         </div >
     );

@@ -8,11 +8,10 @@ import ServiceDetail from './pages/ServiceDetail/ServiceDetail/ServiceDetail';
 import Login from './pages/Login/Login';
 import AuthProvider from './Contexts/AuthProvider';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
-import Appointment from './pages/Appoinment/Appointment/Appointment';
-import AppointmentSuccess from './pages/Appoinment/AppointmentSuccess/AppointmentSuccess';
 import Registration from './pages/Register/Registration';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Doctors from './pages/Doctors/Doctors/Doctors';
+import Appointment from './pages/Appoinment/Appointment';
 
 function App() {
   return (
@@ -47,10 +46,6 @@ function App() {
               <Appointment></Appointment>
             </PrivateRoute>
 
-            <PrivateRoute path="/appointmentSuccess">
-              <AppointmentSuccess></AppointmentSuccess>
-            </PrivateRoute>
-
             <Route path="/login">
               <Login></Login>
             </Route>
@@ -58,6 +53,7 @@ function App() {
             <Route path="/register">
               <Registration></Registration>
             </Route>
+
 
 
 

@@ -26,14 +26,15 @@
 };
 
 @media only screen and (max-width: 600px) {
-    .services-2nd-row{
+    .services-3rd-row{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 20px;
 }
 };
 
 @media only screen and (max-width: 600px) {
-    .services-3rd-row{
+    .services-2nd-row{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     row-gap: 20px;

@@ -18,7 +18,7 @@ const Details = (props) => {
                         <h6 className="font-monospace"><FontAwesomeIcon icon={faPhone} /> {phone} </h6>
                     </div>
 
-                    <NavLink to="/login"><button className="btn w-100 btn-primary rounded-0">Appointment Now</button></NavLink>
+                    <NavLink to="/appointment"><button className="btn w-100 btn-primary rounded-0">Appointment Now</button></NavLink>
 
                 </div>
 

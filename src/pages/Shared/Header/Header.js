@@ -15,7 +15,7 @@ const Header = () => {
                         <Navbar.Brand className="text-white">HealSide Healthcare</Navbar.Brand>
                     </NavLink>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Navbar.Collapse className="text-white" id="basic-navbar-nav">
                         <Nav className="ms-auto">
                             <NavLink className="text-decoration-none mx-3 text-white d-flex align-items-center" to="/home">Home</NavLink>
                             <NavLink className="text-decoration-none mx-3 text-white  d-flex align-items-center" to="/about">About</NavLink>
