@@ -9,6 +9,7 @@ import img3 from '../../../image/banner/banner-3.jpg';
 import Services from '../Services/Services';
 import Facilities from '../Facilities/Facilities';
 import { NavLink } from 'react-router-dom';
+import Products from '../Products/Products';
 
 const Home = () => {
     return (
@@ -86,6 +87,7 @@ const Home = () => {
             </div>
             <Services></Services>
             <Facilities></Facilities>
+            <Products></Products>
         </div>
     );
 };
