@@ -1,0 +1,13 @@
+.facilities{
+   background-image: url("../../../image/banner/banner-1.jpg");
+
+  /* Set a specific height */
+  min-height: 150px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
