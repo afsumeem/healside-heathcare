@@ -1,6 +1,6 @@
 # Web template of Healside Healthcare 
 
-Live Link of Healside Healthcare [Heal-side Healthcare](https://healside-healthcare.netlify.app/).
+Live Link of Heal-side Healthcare [Heal-side Healthcare](https://healside-healthcare.netlify.app/).
 
 ## Description
 * Healside Healthcare website is created by React app.
