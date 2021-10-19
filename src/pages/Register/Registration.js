@@ -28,7 +28,7 @@ const Registration = () => {
             <div className="d-flex justify-content-center  my-4">
 
                 <p className="ms-3">Already have an account?</ p>
-                <NavLink to="/register">Log in </NavLink>
+                <NavLink to="/login">Log in </NavLink>
             </div>
         </div >
     );
