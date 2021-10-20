@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Services = () => {
     const [services, setServices] = useState([]);
 
+    // fetch services data from json file
     useEffect(() => {
         fetch('/fakedata.json')
             .then(res => res.json())
@@ -20,6 +21,9 @@ const Services = () => {
 
             <h2 className="mb-5 font-monospace fw-bold">Popular Counselling Services</h2>
             <div className=" text-start ">
+
+                {/* services first row */}
+
                 <div className="row m-0">
                     <div className="col-md-3 col-sm-12"></div>
                     <div className="col-md-6 col-sm-12 services-1st-row border-bottom border-1 border-primary  mb-3 pb-3">
@@ -34,9 +38,10 @@ const Services = () => {
                     <div className="col-md-3 col-sm-12"></div>
                 </div>
 
+                {/* services second row */}
 
                 <div className="row m-0">
-                    <div className="col-md-12 col-sm-12 services-2nd-row">
+                    <div className="services-2nd-row">
                         {
                             services.filter(service2ndRow => service2ndRow.position === 2).map(service => <Service
                                 key={service._id}
@@ -47,7 +52,10 @@ const Services = () => {
                     </div>
                 </div>
 
+                {/* collapse services second row */}
                 <div class="collapse collapse-horizontal" id="collapseWidthExample">
+
+                    {/* services third row */}
                     <div className="row m-0 mt-3">
                         <div className="col-md-3 col-sm-12"></div>
                         <div className="col-md-6 col-sm-12 services-1st-row border-top border-1 border-primary pt-3">

@@ -1,3 +1,5 @@
+/* sign up page style */
+
 .signup-container{
    
  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../image/banner/banner-1.jpg");
@@ -7,6 +9,8 @@
   background-size: cover;
   position: relative;
 };
+
+/* form container style */
 .form-container{
     margin-top: 200px;
 };

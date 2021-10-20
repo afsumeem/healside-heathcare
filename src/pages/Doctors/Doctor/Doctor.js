@@ -6,7 +6,11 @@ import './Doctor.css';
 const Doctor = (props) => {
 
     const { picture, name, phone, designation } = props.doctor;
+
     return (
+
+        // showing doctors information
+
         <div class="doctor-information border rounded">
             <img className="img-fluid" src={picture} alt="" />
             <h5>{name}</h5>
@@ -18,6 +22,7 @@ const Doctor = (props) => {
                 <p className="mx-auto mt-1">{phone}</p>
             </div>
         </div>
+
     );
 };
 

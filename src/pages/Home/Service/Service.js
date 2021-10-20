@@ -6,9 +6,14 @@ import { NavLink } from 'react-router-dom';
 import './Service.css';
 
 const Service = (props) => {
+
     const { picture1, name, desc, time, phone, _id } = props.service;
+
     return (
         <div className="border rounded-2">
+
+            {/* single service item */}
+
             <NavLink to={`/service/${_id}`}>
                 <div className="service-img">
                     <img className="img-fluid img" src={picture1} alt="" />
@@ -17,6 +22,7 @@ const Service = (props) => {
                     </div>
                 </div>
             </NavLink>
+
             <div className="px-3">
                 <h5>{name}</h5>
                 <p>{desc.slice(0, 60)}</p>

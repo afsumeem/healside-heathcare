@@ -18,7 +18,7 @@ const useFirebase = () => {
 
 
 
-    //create user with email and password
+    //create and sign in user with email and password
 
     const getUserName = e => {
         setName(e.target.value);
@@ -50,6 +50,8 @@ const useFirebase = () => {
     };
 
 
+    //register new user
+
     const registerNewUser = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
@@ -65,7 +67,7 @@ const useFirebase = () => {
             })
     }
 
-    //user sign in
+    //user sign in with email and password
     const processLogin = (email, password) => {
         console.log(email, password)
         setIsLoading(true);
@@ -81,6 +83,7 @@ const useFirebase = () => {
                 setError(error.message);
             });
     }
+
 
     //set user name
     const setUserName = () => {
@@ -145,7 +148,7 @@ const useFirebase = () => {
     };
 
 
-    //return 
+    //return all functions
     return {
         user,
         error,

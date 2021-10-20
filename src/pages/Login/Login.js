@@ -27,10 +27,16 @@ const Login = () => {
     return (
         <div className="login-container" >
             <div className="container">
+
+                {/* login form section */}
                 <div className="form-container w-50 p-5 mx-auto bg-white bg-opacity-50">
                     <Form onSubmit={handleRegistration} className="w-100 mx-auto pt-3">
+
+                        {/* login form design */}
                         <h2 className="pt-5 text-uppercase fw-bolder">Welcome back!</h2>
                         <p className="fw-bold mb-5">Login to Continue</p>
+
+                        {/* input groups */}
                         <InputGroup className="mb-3 mt-4">
 
                             <FormControl
@@ -63,9 +69,12 @@ const Login = () => {
 
                     </Form>
 
+                    {/* google sign in button */}
 
                     <Button variant="outline-danger" className="rounded-circle mb-3" onClick={handleGoogleLogIn} type="submit"><FontAwesomeIcon className="fs-5" icon={faGoogle} /></Button><br />
 
+
+                    {/* signup button */}
                     <NavLink to="/signup"> <Button variant="outline-primary" className="rounded text-dark fw-bolder w-100 mb-4" type="submit"> SignUp Now</Button></NavLink>
 
                 </div>

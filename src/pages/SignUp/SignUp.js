@@ -5,16 +5,24 @@ import useAuth from '../../hooks/useAuth';
 import './SignUp.css';
 
 const SignUp = () => {
+
+    // import functions useFirebase hook
     const { getUserEmail, getUserPassword, handleRegistration, error, getUserName } = useAuth();
 
 
     return (
         <div className="signup-container" >
             <div className="container">
+
+                {/* signup form container */}
+
                 <div className="form-container w-50 p-5 mx-auto bg-dark bg-opacity-50">
                     <h2 className="pt-5 text-uppercase text-white fw-bolder">Create an Account</h2>
                     <Form onSubmit={handleRegistration} className="w-75 mx-auto pt-5">
                         <div className="row mb-3 text-danger">{error}</div>
+
+
+                        {/* sign up form inputgroups */}
 
                         <FloatingLabel
                             controlId="floatingInput"
@@ -35,6 +43,7 @@ const SignUp = () => {
                             <Form.Control onBlur={getUserPassword} type="password" placeholder="Password" />
                         </FloatingLabel>
 
+                        {/* signup button */}
                         <Button className="w-100 mt-3 bg-info text-dark fw-bolder" type="submit">Sign up</Button>
 
                     </Form>
@@ -42,6 +51,7 @@ const SignUp = () => {
 
                     <p className="ms-3 mt-3 text-white fw-bolder">Already have an account ? </ p>
 
+                    {/* login page path */}
                     <NavLink to="/login" className="btn rounded btn-primary">Log in </NavLink>
 
                 </div>

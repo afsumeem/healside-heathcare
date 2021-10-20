@@ -7,7 +7,10 @@ const Facilities = () => {
     return (
         <div>
             <div className="facilities"></div>
+
+            {/* facilities section */}
             <div className="row m-0 text-white">
+
                 <div className="col-md-4 col-sm-12 bg-success px-3 py-5 d-flex">
                     <div className="d-flex align-items-center ">
                         <FontAwesomeIcon className="fs-1 mx-3 " icon={faHeartbeat} />
@@ -18,6 +21,7 @@ const Facilities = () => {
                         <p>Most Experienced and Qualified</p>
                     </div>
                 </div>
+
                 <div className="col-md-4 col-sm-12 bg-success bg-opacity-75  py-5 px-3 d-flex">
                     <div className="d-flex align-items-center">
                         <FontAwesomeIcon className="fs-1 mx-3" icon={faCodeBranch} />
@@ -27,8 +31,8 @@ const Facilities = () => {
                         <h4>Medical Brances</h4>
                         <p>Available Around Your City</p>
                     </div>
-
                 </div>
+
                 <div className="col-md-4 bg-success col-sm-12 py-5 px-3  d-flex">
                     <div className="d-flex align-items-center">
                         <FontAwesomeIcon className="fs-1 mx-3" icon={faBoxOpen} />
@@ -38,9 +42,10 @@ const Facilities = () => {
                         <h4>Success Stories</h4>
                         <p>Top Level Professional Advices</p>
                     </div>
-
                 </div>
+
             </div>
+
             <div className="facilities"></div>
 
         </div>

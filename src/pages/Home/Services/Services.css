@@ -1,14 +1,19 @@
+/* style services first row */
 
 .services-1st-row{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     column-gap: 20px;
 }
+
+/* style services second row */
 .services-2nd-row{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     column-gap: 20px;
 }
+
+/* style services third row */
 .services-3rd-row{
     display: grid;
     grid-template-columns: repeat(2,1fr);

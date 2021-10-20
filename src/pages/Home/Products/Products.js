@@ -6,6 +6,8 @@ const Products = () => {
     return (
         <div className="container">
             <div className="row">
+
+                {/* products section */}
                 <div className="col-md-6 col-sm-12  text-start">
                     <h3 className="my-5">Best Therapy</h3>
                     <p >The HealSide Healthcare website offers streamlined mobile and desktop designs. The information on the site is clearly segmented for patients and doctors. That makes it easier for site visitors to find the exact information that they need. The site’s health library includes videos, articles and health tools.That makes it easier for site visitors to find the exact information that they need.</p>

@@ -17,7 +17,7 @@ const AboutUs = () => {
                 </div>
 
 
-                {/* about us */}
+                {/* about us details*/}
                 <div className="col-md-6 text-start px-5 my-5">
                     <h2 className="mb-2">ABOUT US</h2>
                     <hr className="w-25" />

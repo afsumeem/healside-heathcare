@@ -9,9 +9,12 @@ const Footer = () => {
         <footer className="bg-dark m-0 ">
             <div className="container">
 
+                {/* footer section */}
                 <div className="row text-start m-0 text-white   px-5 pt-4 pb-3">
                     <div className="col-md-6 col-sm-12 d-block">
                         <div className="d-flex">
+
+                            {/* footer contents */}
                             <div className="me-4 d-flex align-items-center fs-4">
                                 <FontAwesomeIcon icon={faMapMarkerAlt} />
                             </div>
@@ -44,6 +47,8 @@ const Footer = () => {
                         </Button>
 
                     </div>
+
+                    {/* social icons */}
                     <div className="col-md-6">
                         <h5>About HealSide Healthcare</h5>
                         <p className="fw-light mt-3 opacity-50">We help you to understand the problem. <br />We're the leading advisory center for you!<br />
@@ -67,6 +72,7 @@ const Footer = () => {
 
                     </div>
                 </div>
+
                 <p className="text-white text-opacity-50 m-0">Copyright &copy;2021 All Rights Reserved | This Website is made with &#x003C;&#10083;&#x003E; by Afsana Meem </p>
 
             </div>

@@ -10,6 +10,8 @@ const Details = (props) => {
         <div className="container mt-5 ">
             <div className="row m-0">
                 <div className="col-md-6 text-start border mt-4 p-0">
+
+                    {/* service detail */}
                     <div className="p-5">
                         <h2>{name}</h2>
                         <br />

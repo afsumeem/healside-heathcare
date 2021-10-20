@@ -15,8 +15,11 @@ const Appointment = () => {
 
     return (
         <div className="mt-5">
+
+            {/* appointment header */}
             <h2 className="text-dark pt-3">Online Doctor Appointment Form</h2>
             <div className="d-flex justify-content-center">
+
 
                 {/* appointment form */}
                 <form className="pt-3 pb-5" onSubmit={handleSubmit(onSubmit)}>
@@ -28,8 +31,12 @@ const Appointment = () => {
                     <input className=" m-3 w-50 px-4 py-2" defaultValue={user.email} {...register("email", { required: true })} />
                     {errors.email && <span className="text-danger">Please Enter Your Email</span>}
 
+
+                    {/* submit button */}
                     <input className="d-block mx-auto m-3 btn btn-info w-50" type="submit" />
 
+
+                    {/* button for going back to home */}
                     <NavLink to="/home" className=" text-decoration-none d-block mx-auto m-3 btn btn-info w-25 bg-secondary" >Home</NavLink>
 
                 </form>

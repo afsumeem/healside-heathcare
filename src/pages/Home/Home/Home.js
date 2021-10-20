@@ -14,8 +14,15 @@ import Products from '../Products/Products';
 const Home = () => {
     return (
         <div>
+
+            {/* banner section start */}
+
             <div className="banner-container">
+
+                {/* carousel  */}
                 <Carousel>
+
+                    {/* carousel item  */}
                     <Carousel.Item>
                         <img className="d-block w-100 banner" src={img1} alt="First slide" />
 
@@ -27,6 +34,7 @@ const Home = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
 
+                    {/* carousel item  */}
                     <Carousel.Item>
                         <img className="d-block w-100 banner" src={img2} alt="Second slide" />
 
@@ -38,6 +46,7 @@ const Home = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
 
+                    {/* carousel item  */}
                     <Carousel.Item>
                         <img className="d-block w-100 banner" src={img3} alt="Third slide" />
 
@@ -48,9 +57,11 @@ const Home = () => {
                             </NavLink>
                         </Carousel.Caption>
                     </Carousel.Item>
+
                 </Carousel>
             </div>
 
+            {/* support section start */}
             <div className="container my-5">
                 <div className="row">
                     <div className="col-md-4 col-sm-12 bg-warning bg-opacity-25 p-3 d-flex border-start border-primary border-5">
@@ -85,6 +96,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            {/* services,facilities,products components */}
             <Services></Services>
             <Facilities></Facilities>
             <Products></Products>
