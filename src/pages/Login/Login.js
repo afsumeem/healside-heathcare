@@ -10,7 +10,7 @@ import './Login.css';
 
 
 const Login = () => {
-    const { signInUsingGoogle, handleResetPassword, getUserEmail, getUserPassword, handleRegistration } = useAuth();
+    const { signInUsingGoogle, handleResetPassword, getUserEmail, getUserPassword, handleRegistration, email } = useAuth();
 
     const location = useLocation();
     const history = useHistory();
@@ -44,6 +44,7 @@ const Login = () => {
                                 aria-label="Your Email"
                                 aria-describedby="basic-addon2"
                                 onBlur={getUserEmail}
+                                type="email"
 
                             />
                             <InputGroup.Text id="basic-addon2" className="bg-primary bg-opacity-75"><FontAwesomeIcon className="fs-5 text-white mx-3" icon={faUser} /></InputGroup.Text>
@@ -55,6 +56,7 @@ const Login = () => {
                                 aria-label="Password"
                                 aria-describedby="basic-addon2"
                                 onBlur={getUserPassword}
+                                type="password"
                             />
                             <InputGroup.Text id="basic-addon2" className="bg-primary bg-opacity-75"><FontAwesomeIcon className="fs-5 text-white mx-3" icon={faLock} /></InputGroup.Text>
                         </InputGroup>

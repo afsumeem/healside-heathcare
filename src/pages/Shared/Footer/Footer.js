@@ -10,39 +10,39 @@ const Footer = () => {
             <div className="container">
 
                 {/* footer section */}
-                <div className="row text-start m-0 text-white   px-5 pt-4 pb-3">
-                    <div className="col-md-6 col-sm-12 d-block">
-                        <div className="d-flex">
+                <div className="row text-center m-0 text-white   px-5 pt-4 pb-3">
+                    <div className="col-md-6 col-sm-12 d-block mb-3">
+                        <div className="d-flex justify-content-center">
 
                             {/* footer contents */}
                             <div className="me-4 d-flex align-items-center fs-4">
                                 <FontAwesomeIcon icon={faMapMarkerAlt} />
                             </div>
-                            <div>
+                            <div >
                                 <p>25 Jatrabari-1000
                                     <br />
-                                    <span className="fs-6"> Dhaka, Bangladesh</span>
+                                    <span className="fs-6"> Dhaka Bangladesh</span>
                                 </p>
                             </div>
                         </div>
-                        <div className="d-flex">
+                        <div className="d-flex justify-content-center">
                             <div className="me-4 d-flex align-items-center fs-4">
                                 <FontAwesomeIcon icon={faPhone} />
                             </div>
                             <div>
-                                <p className="fs-6">+1 555 123456 </p>
+                                <p className="fs-6">+11 555 123-456 </p>
                             </div>
                         </div>
 
-                        <div className="d-flex">
+                        <div className="d-flex justify-content-center">
                             <div className="me-4 fs-4">
                                 <FontAwesomeIcon icon={faEnvelope} />
                             </div>
                             <div>
-                                <p>support@healside.com </p>
+                                <p>support@hs.com </p>
                             </div>
                         </div>
-                        <Button className="w-50 mt-3" variant="outline-info" size="sm">
+                        <Button className="w-50 mt-3 " variant="outline-info" size="sm">
                             CONTACT US
                         </Button>
 

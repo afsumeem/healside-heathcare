@@ -16,7 +16,7 @@ const Header = () => {
             <Navbar fixed="top" bg="dark" className="bg-opacity-75 py-3" expand="lg">
                 <Container>
                     <NavLink to="/home" className=" text-decoration-none">
-                        <Navbar.Brand className="text-white">HealSide Healthcare</Navbar.Brand>
+                        <Navbar.Brand className="text-white fst-italic">HealSide Healthcare</Navbar.Brand>
                     </NavLink>
 
 
