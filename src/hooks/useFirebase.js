@@ -1,33 +1,39 @@
 import { useEffect, useState } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendEmailVerification, updateProfile, sendPasswordResetEmail } from "firebase/auth";
 import initializeAuthentication from '../Firebase/firebase.init';
 
 initializeAuthentication();
+
+
 const useFirebase = () => {
 
     const auth = getAuth();
 
     const [user, setUsers] = useState({});
-
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState("");
 
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const getUserEmail = (event) => {
-        setEmail(event.target.value);
-    };
-
-    const getUserPassword = (event) => {
-        setPassword(event.target.value);
-    };
-
-
     //create user with email and password
 
-    const handleSubmitForm = event => {
-        event.preventDefault();
+    const getUserName = e => {
+        setName(e.target.value);
+    };
+    const getUserEmail = e => {
+        setEmail(e.target.value);
+
+    };
+    const getUserPassword = e => {
+        setPassword(e.target.value);
+
+    };
+
+
+    const handleRegistration = e => {
+        e.preventDefault();
 
         if (password.length > 6) {
             setError("password should have 6 character")
@@ -36,15 +42,64 @@ const useFirebase = () => {
             setError("password must contain 2 upper case")
             return;
         }
+
+        console.log(email, password)
+        registerNewUser(email, password);
+        registerNewUser(email, password)
+    };
+
+
+    const registerNewUser = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-                setUsers(result.user);
+                const user = (result.user);
+                console.log(user);
+                setError('');
+                verifyEmail();
+                setUserName()
             })
+            .catch((error) => {
+                setError(error.message)
+            })
+    }
 
-            .catch((err) => {
-                setError(err.message)
+    //user sign in
+    const processLogin = (email, password) => {
+        console.log(email, password)
+        setIsLoading(true);
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                setUsers(user);
+                setError('');
+                console.log(user);
+            })
+            .catch((error) => {
+                setError(error.message);
+            });
+    }
+
+    //set user name
+    const setUserName = () => {
+        updateProfile(auth.currentUser, { displayName: name })
+            .then(result => { })
+    }
+
+    //verify users Email
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(result => {
+                console.log(result)
             })
     };
+
+
+    //reset password
+
+    const handleResetPassword = () => {
+        sendPasswordResetEmail(auth, email)
+            .then(result => { })
+    }
 
 
     //Google sign in
@@ -55,7 +110,6 @@ const useFirebase = () => {
 
         return signInWithPopup(auth, googleProvider)
             .finally(() => setIsLoading(false));
-
     };
 
 
@@ -71,7 +125,7 @@ const useFirebase = () => {
             setIsLoading(false);
         });
         return () => unSubscribe;
-    }, [])
+    }, [isLoading])
 
 
 
@@ -90,12 +144,21 @@ const useFirebase = () => {
     //return 
     return {
         user,
-        signInUsingGoogle,
-        isLoading,
+        error,
+        name,
+        email,
+        password,
+        handleResetPassword,
+        getUserName,
         getUserEmail,
         getUserPassword,
-        handleSubmitForm,
-        logOut
+        verifyEmail,
+        processLogin,
+        handleRegistration,
+        signInUsingGoogle,
+        isLoading,
+        logOut,
+        registerNewUser
     }
 };
 

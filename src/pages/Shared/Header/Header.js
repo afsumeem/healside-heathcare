@@ -33,7 +33,7 @@ const Header = () => {
                                 ?
                                 <NavLink onClick={logOut} className="text-decoration-none mx-3 text-white  d-flex align-items-center" to="/home">Logout</NavLink>
                                 :
-                                <NavLink className="text-decoration-none mx-3 text-white  d-flex align-items-center" to="/register">Register</NavLink>
+                                <NavLink className="text-decoration-none mx-3 text-white  d-flex align-items-center" to="/signup">Sign up</NavLink>
                             }
                         </Nav>
                     </Navbar.Collapse>

@@ -8,10 +8,10 @@ import ServiceDetail from './pages/ServiceDetail/ServiceDetail/ServiceDetail';
 import Login from './pages/Login/Login';
 import AuthProvider from './Contexts/AuthProvider';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
-import Registration from './pages/Register/Registration';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Doctors from './pages/Doctors/Doctors/Doctors';
 import Appointment from './pages/Appoinment/Appointment';
+import SignUp from './pages/SignUp/SignUp';
 
 function App() {
   return (
@@ -50,12 +50,9 @@ function App() {
               <Login></Login>
             </Route>
 
-            <Route path="/register">
-              <Registration></Registration>
+            <Route path="/signup">
+              <SignUp></SignUp>
             </Route>
-
-
-
 
             <Route path="*">
               <NotFound></NotFound>
