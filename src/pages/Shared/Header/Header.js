@@ -61,7 +61,7 @@ const Header = () => {
                                 ?
                                 <NavLink onClick={logOut} className="text-decoration-none mx-3 py-2 rounded px-2 text-white  d-flex align-items-center  menu-item" to="/home">Logout</NavLink>
                                 :
-                                <NavLink className="text-decoration-none rounded py-2 mx-3 text-white  d-flex align-items-center  menu-item" to="/signup">Sign up</NavLink>
+                                <NavLink className="text-decoration-none rounded py-2 px-2 mx-3 text-white  d-flex align-items-center  menu-item" to="/signup">Sign up</NavLink>
                             }
                         </Nav>
                     </Navbar.Collapse>
