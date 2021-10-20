@@ -25,7 +25,7 @@ const Service = (props) => {
 
             <div className="px-3">
                 <h5>{name}</h5>
-                <p>{desc.slice(0, 60)}</p>
+                <p>{desc.slice(0, 58)}</p>
                 <p className="m-0"><FontAwesomeIcon icon={faClock} /> {time}</p>
                 <p><FontAwesomeIcon icon={faPhone} /> {phone}</p>
             </div>
