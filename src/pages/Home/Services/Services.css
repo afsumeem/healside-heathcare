@@ -1,3 +1,5 @@
+
+
 /* style services first row */
 
 .services-1st-row{
@@ -23,24 +25,23 @@
 /* responsive services-container */
 
 @media only screen and (max-width: 600px) {
-    .services-1st-row{
+    .services-1st-row, .services-2nd-row, .services-3rd-row{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     row-gap: 20px;
+}
+};
+/* @media only screen and (max-width: 600px) {
+    .services-2nd-row{
+    display: flex;
+    flex-wrap: wrap;
 }
 };
 
-@media only screen and (max-width: 600px) {
-    .services-2nd-row{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    row-gap: 20px;
-}
-};
 @media only screen and (max-width: 600px) {
     .services-3rd-row{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     row-gap: 20px;
 }
-};
+}; */

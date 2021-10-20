@@ -41,7 +41,8 @@ const Services = () => {
                 {/* services second row */}
 
                 <div className="row m-0">
-                    <div className="services-2nd-row">
+
+                    <div className="services-2nd-row col-md-12">
                         {
                             services.filter(service2ndRow => service2ndRow.position === 2).map(service => <Service
                                 key={service._id}
@@ -50,6 +51,7 @@ const Services = () => {
                             </Service>)
                         }
                     </div>
+
                 </div>
 
                 {/* collapse services second row */}
