@@ -1,6 +1,6 @@
-.login-container{
+.signup-container{
    
- background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../image/banner/banner-2.jpg");
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../image/banner/banner-1.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;

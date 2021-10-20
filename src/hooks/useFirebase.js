@@ -17,6 +17,7 @@ const useFirebase = () => {
     const [error, setError] = useState("");
 
 
+
     //create user with email and password
 
     const getUserName = e => {
@@ -45,7 +46,7 @@ const useFirebase = () => {
 
         console.log(email, password)
         registerNewUser(email, password);
-        registerNewUser(email, password)
+        processLogin(email, password)
     };
 
 
@@ -56,7 +57,8 @@ const useFirebase = () => {
                 console.log(user);
                 setError('');
                 verifyEmail();
-                setUserName()
+                setUserName();
+                console.log(setUserName);
             })
             .catch((error) => {
                 setError(error.message)
@@ -72,6 +74,7 @@ const useFirebase = () => {
                 const user = result.user;
                 setUsers(user);
                 setError('');
+                setUserName();
                 console.log(user);
             })
             .catch((error) => {
@@ -84,6 +87,7 @@ const useFirebase = () => {
         updateProfile(auth.currentUser, { displayName: name })
             .then(result => { })
     }
+
 
     //verify users Email
     const verifyEmail = () => {

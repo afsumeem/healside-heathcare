@@ -1,0 +1,15 @@
+/* style location section */
+
+.location{
+    box-shadow: 2px 2px 4px rgb(77, 76, 76) inset,
+                -2px -2px 4px rgb(32, 32, 32) inset;
+
+            
+}
+
+/* style menu item */
+.menu-item{
+ box-shadow: 2px 2px 4px rgb(41, 40, 40) inset,
+                -2px -2px 4px rgb(85, 85, 85) inset;
+
+}
