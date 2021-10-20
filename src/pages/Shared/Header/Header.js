@@ -25,11 +25,14 @@ const Header = () => {
                         <p className="mb-0 fs-6">
                             <i className="fas fa-map-marker-alt text-primary"></i>
                             <span className="text-white">Dhaka, Bangladesh | 01712345678 |</span>
+                            <a href="https://www.facebook.com/"><FontAwesomeIcon className="fs-6 text-primary mx-2" icon={faFacebook} /></a>
 
-                            <FontAwesomeIcon className="fs-6 text-primary mx-2" icon={faFacebook} />
-                            <FontAwesomeIcon className="fs-6 text-danger me-2" icon={faInstagram} />
-                            <FontAwesomeIcon className="fs-6 text-info me-2" icon={faTwitter} />
-                            <FontAwesomeIcon className="fs-6 text-primary me-2" icon={faBehance} />
+                            <a href="https://www.instagram.com/"><FontAwesomeIcon className="fs-6 text-danger me-2" icon={faInstagram} /></a>
+
+                            <a href="https://twitter.com/?lang=en"><FontAwesomeIcon className="fs-6 text-info me-2" icon={faTwitter} /></a>
+
+                            <a href="https://www.behance.net/"><FontAwesomeIcon className="fs-6 text-primary me-2" icon={faBehance} /></a>
+
 
                         </p>
                     </div>

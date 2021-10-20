@@ -55,19 +55,26 @@ const Footer = () => {
                             We help you to understand the problem. <br />We're the leading advisory center for you!</p>
 
                         <Button variant="outline-info rounded-circle m-2" size="sm">
-                            <FontAwesomeIcon icon={faTwitter} />
+                            <a href="https://twitter.com/?lang=en"><FontAwesomeIcon icon={faTwitter} /></a>
                         </Button>
+
                         <Button variant="outline-primary rounded-circle m-2" size="sm">
-                            <FontAwesomeIcon icon={faFacebook} />
+                            <a href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook} /></a>
                         </Button>
+
                         <Button variant="outline-danger rounded-circle m-2" size="sm">
-                            <FontAwesomeIcon icon={faInstagram} />
+                            <a href="https://www.instagram.com/"> <FontAwesomeIcon icon={faInstagram} /></a>
+
                         </Button>
+
                         <Button variant="outline-info rounded-circle m-2" size="sm">
-                            <FontAwesomeIcon icon={faSkype} />
+                            <a href="https://www.skype.com/en/"><FontAwesomeIcon icon={faSkype} /></a>
+
                         </Button>
+
                         <Button variant="outline-primary rounded-circle m-2" size="sm">
-                            <FontAwesomeIcon icon={faDiscord} />
+                            <a href="https://discord.com/"> <FontAwesomeIcon icon={faDiscord} /></a>
+
                         </Button>
 
                     </div>
